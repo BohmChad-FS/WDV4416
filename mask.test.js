@@ -34,3 +34,9 @@ describe("Mask Credit Card", ()=>{
         expect(mask("ASDFGH7890123456")).toBe("************3456")
     })
 })
+
+describe("Mask Credit Card", ()=>{
+    test("As a user I want my credit info masked except the last four digits",()=>{
+        expect(mask("12345678901234567")).toBe("Invalid Credit Card Info")
+    })
+})
